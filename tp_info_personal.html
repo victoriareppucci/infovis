@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Trabajo Práctico: Visualización de Datos Personales | Victoria Reppucci</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0f172a;
+            --accent-blue: #3b82f6;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        /* Hero Header */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #1e293b 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 50px;
+            border-bottom: 4px solid var(--accent-blue);
+        }
+
+        .hero h1 { font-weight: 800; font-size: 3rem; margin-bottom: 15px; }
+        
+        /* Contenedores de Gráficos */
+        .viz-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .viz-title {
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .viz-description {
+            color: #64748b;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .viz-frame {
+            width: 100%;
+            min-height: 450px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Badge para Metodología */
+        .badge-tech {
+            background: #eff6ff;
+            color: var(--accent-blue);
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            background: var(--primary-dark);
+            color: #94a3b8;
+            padding: 60px 0;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero text-center">
+        <div class="container">
+            <span class="badge-tech mb-3 d-inline-block">ECD.2025.B - Visualización de Datos</span>
+            <h1>Arqueología Digital</h1>
+            <p class="lead opacity-75">Explorando patrones ocultos en mi biblioteca multimedia personal</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="viz-card">
+            <h2 class="viz-title">¿Qué lugares retraté en el último año?</h2>
+            <p class="viz-description">
+                Un mapa de calor que revela mis puntos de mayor actividad geográfica. 
+                Los "picos" de tamaño representan la acumulación de archivos en coordenadas específicas.
+            </p>
+            <div class="viz-frame">
+                <div style="width: 100%; min-height:334px" id="datawrapper-vis-A03BC">
+                    <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/A03BC/embed.js" charset="utf-8" data-target="#datawrapper-vis-A03BC"></script>
+                    <noscript>
+                        <img src="https://datawrapper.dwcdn.net/A03BC/full.png" alt="Mapa de calor de capturas" />
+                    </noscript>
+                </div>
+            </div>
+        </div>
+
+        <div class="viz-card">
+            <h2 class="viz-title">¿En qué horarios soy creadora vs. consumidora?</h2>
+            <p class="viz-description">
+                Análisis comparativo del origen del contenido (Generación Propia vs. Contenido Externo) 
+                distribuido por franjas horarias.
+            </p>
+            <div class="viz-frame">
+                <p class="text-muted">[Pendiente: Visualización Flourish]</p>
+            </div>
+        </div>
+
+        <div class="viz-card">
+            <h2 class="viz-title">Hábitos Semanales en Buenos Aires</h2>
+            <p class="viz-description">
+                Exploración interactiva centrada en la provincia para identificar rutinas de movimiento 
+                según el día de la semana.
+            </p>
+            <div class="viz-frame">
+                <p class="text-muted">[Pendiente: Visualización Tableau]</p>
+            </div>
+        </div>
+
+        <div class="viz-card">
+            <h2 class="viz-title">Evolución Temporal: El efecto vacaciones</h2>
+            <p class="viz-description">
+                Correlación entre el volumen de archivos generados y la ubicación para identificar 
+                picos atípicos de producción multimedia.
+            </p>
+            <div class="viz-frame">
+                <p class="text-muted">[Pendiente: Visualización RAWGraphs]</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2"><strong>Vicky Reppucci</strong></p>
+            <p class="small mb-4">Ciencia de Datos | ECD.2025.B</p>
+            <div class="small opacity-50">
+                Metodología: Extracción de metadatos mediante Python (Pillow/Hachoir) <br>
+                Herramientas: Datawrapper, Flourish, Tableau, RAWGraphs
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
