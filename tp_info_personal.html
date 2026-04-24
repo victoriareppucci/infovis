@@ -13,6 +13,7 @@
             --primary-dark: #0f172a;
             --accent-blue: #3b82f6;
             --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
         }
 
         body {
@@ -35,47 +36,58 @@
         .viz-card {
             background: white;
             border-radius: 16px;
-            padding: 30px;
+            padding: 35px;
             margin-bottom: 40px;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-            overflow: hidden;
+            border: 1px solid var(--border-color);
         }
 
         .viz-title {
             font-weight: 700;
             color: var(--primary-dark);
-            margin-bottom: 10px;
-            font-size: 1.5rem;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
         }
 
         .viz-description {
             color: #64748b;
-            margin-bottom: 25px;
-            font-size: 1rem;
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+            max-width: 800px;
         }
 
         .viz-frame {
             width: 100%;
-            background: transparent;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
+            background: #fff;
         }
 
-        .viz-frame iframe {
-            width: 100% !important;
-            border: none;
+        .viz-frame img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .badge-tech {
             background: #eff6ff;
             color: var(--accent-blue);
             font-weight: 600;
-            padding: 5px 15px;
+            padding: 6px 16px;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        .legend-box {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.9rem;
         }
 
         footer {
@@ -92,63 +104,72 @@
         <div class="container">
             <span class="badge-tech mb-3 d-inline-block">ECD.2025.B - Maestría en Ciencia de Datos</span>
             <h1>Mi año en fotos</h1>
-            <p class="lead opacity-75">¿Qué dicen mis fotos de mi?</p>
+            <p class="lead opacity-75">Arqueología digital: ¿Qué dicen mis archivos de mi rutina?</p>
         </div>
     </header>
 
     <main class="container">
         
         <div class="viz-card">
-            <h2 class="viz-title">¿Qué lugares retraté en el último año?</h2>
+            <h2 class="viz-title">1. Centros de Gravedad: ¿Dónde estuve?</h2>
             <p class="viz-description">
                 Este mapa interactivo muestra la distribución geográfica de mis capturas. 
-                El tamaño de los puntos representa la densidad de archivos, permitiendo identificar mis centros de gravedad de actividad física y digital.
+                El tamaño de los puntos representa la densidad de archivos, permitiendo identificar los "picos" de actividad física y digital donde se concentró mi año.
             </p>
             <div class="viz-frame">
-                <div style="width: 100%; min-height:400px" id="datawrapper-vis-A03BC">
+                <div style="width: 100%; min-height:450px" id="datawrapper-vis-A03BC">
                     <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/A03BC/embed.js" charset="utf-8" data-target="#datawrapper-vis-A03BC"></script>
                     <noscript>
-                        <img src="https://datawrapper.dwcdn.net/A03BC/full.png" alt="Mapa de calor de capturas" style="width: 100%;" />
+                        <img src="https://datawrapper.dwcdn.net/A03BC/full.png" alt="Mapa de calor de capturas" />
                     </noscript>
                 </div>
             </div>
         </div>
 
         <div class="viz-card">
-            <h2 class="viz-title">Cronología Fotográfica: Tiempo y Espacio</h2>
+            <h2 class="viz-title">2. Cronogeografía: Tiempo y Espacio</h2>
             <p class="viz-description">
-                Análisis de la evolución temporal de mis capturas. Esta visualización conecta el momento preciso del registro con su ubicación, permitiendo observar cómo mi huella digital se desplaza y transforma a lo largo de los meses.
+                Evolución temporal de mis registros. Esta visualización conecta el momento preciso del registro con su ubicación, permitiendo observar cómo mi huella digital se desplaza y transforma a lo largo de los meses.
             </p>
             <div class="viz-frame">
                 <div class="flourish-embed flourish-map" data-src="visualisation/28673111">
                     <script src="https://public.flourish.studio/resources/embed.js"></script>
                     <noscript>
-                        <img src="https://public.flourish.studio/visualisation/28673111/thumbnail" width="100%" alt="map visualization" />
+                        <img src="https://public.flourish.studio/visualisation/28673111/thumbnail" width="100%" alt="Visualización Flourish" />
                     </noscript>
                 </div>
             </div>
         </div>
 
         <div class="viz-card">
-            <h2 class="viz-title">Hábitos Semanales en Buenos Aires</h2>
+            <h2 class="viz-title">3. Geografía de la Rutina: Buenos Aires</h2>
             <p class="viz-description">
-                Exploración centrada en el AMBA para entender cómo mis desplazamientos y la captura de datos varían según el día de la semana.
+                Filtro interactivo para entender cómo mis desplazamientos en el AMBA varían según el día de la semana. ¿Hacia dónde se mueve mi lente los lunes de oficina frente a los domingos de descanso?
             </p>
             <div class="viz-frame">
-                <div class="bg-light text-center py-5">
-                    <p class="text-muted small">[Pendiente: Visualización Tableau]</p>
+                <div class="bg-light text-center py-5 border rounded">
+                    <p class="text-muted small">Insertar aquí el Embed de Tableau Public (viz_4_tableau_ba.csv)</p>
                 </div>
             </div>
         </div>
 
         <div class="viz-card">
-            <h2 class="viz-title">¿En qué horarios soy creadora vs. consumidora?</h2>
+            <h2 class="viz-title">4. Ritmo Semanal: La Construcción del Hábito</h2>
             <p class="viz-description">
-                Un análisis de mi ritmo circadiano digital. Comparamos el contenido generado por mi cámara frente al contenido externo recibido por plataformas sociales según la hora del día.
+                Este análisis muestra el volumen acumulado de fotos por día de la semana. Cada barra se fragmenta por colores (semanas), permitiendo ver qué semanas específicas fueron anomalías de alta productividad.
             </p>
-            <div class="viz-frame">
-                <div class="bg-light text-center py-5">
-                    <p class="text-muted small">[Pendiente: Visualización RAWGraphs]</p>
+            <div class="viz-frame text-center">
+                <img src="data/visualizaciones/pics_per_day.svg" alt="Distribución semanal de capturas">
+                
+                <div class="legend-box text-start">
+                    <div class="row align-items-center">
+                        <div class="col-md-9">
+                            <strong>Interpretación:</strong> La altura de la barra es el total histórico por día. Los segmentos de color indican la contribución de semanas individuales.
+                        </div>
+                        <div class="col-md-3 text-end">
+                            <span class="badge bg-primary">Eje X: Lunes a Domingo</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,8 +181,8 @@
             <p class="mb-2"><strong>Victoria Reppucci</strong></p>
             <p class="small mb-4">Ciencia de Datos | ECD.2025.B</p>
             <div class="small opacity-50">
-                Metodología: Scripts de Python para minería de metadatos EXIF <br>
-                Herramientas: Datawrapper, Flourish, Tableau, RAWGraphs
+                <strong>Metodología:</strong> Extracción de metadatos EXIF con Python (Pillow, Hachoir). <br>
+                <strong>Stack:</strong> Datawrapper, Flourish, Tableau, RAWGraphs.
             </div>
         </div>
     </footer>
