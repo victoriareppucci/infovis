@@ -113,8 +113,7 @@
         <div class="viz-card">
             <h2 class="viz-title">1. Centros de Gravedad: ¿Dónde estuve?</h2>
             <p class="viz-description">
-                Este mapa interactivo muestra la distribución geográfica de mis capturas. 
-                El tamaño de los puntos representa la densidad de archivos, permitiendo identificar los "picos" de actividad física y digital donde se concentró mi año.
+                Este mapa interactivo muestra la distribución geográfica de mis capturas. El tamaño de los puntos representa la densidad de archivos, permitiendo identificar los "picos" de actividad física y digital.
             </p>
             <div class="viz-frame">
                 <div style="width: 100%; min-height:450px" id="datawrapper-vis-A03BC">
@@ -129,7 +128,7 @@
         <div class="viz-card">
             <h2 class="viz-title">2. Cronogeografía: Tiempo y Espacio</h2>
             <p class="viz-description">
-                Evolución temporal de mis registros. Esta visualización conecta el momento preciso del registro con su ubicación, permitiendo observar cómo mi huella digital se desplaza y transforma a lo largo de los meses.
+                Evolución temporal de mis registros. Esta visualización conecta el momento preciso del registro con su ubicación geográfica a lo largo de los meses.
             </p>
             <div class="viz-frame">
                 <div class="flourish-embed flourish-map" data-src="visualisation/28673111">
@@ -144,19 +143,46 @@
         <div class="viz-card">
             <h2 class="viz-title">3. Geografía de la Rutina: Buenos Aires</h2>
             <p class="viz-description">
-                Filtro interactivo para entender cómo mis desplazamientos en el AMBA varían según el día de la semana. ¿Hacia dónde se mueve mi lente los lunes de oficina frente a los domingos de descanso?
+                Filtro interactivo para entender cómo mis desplazamientos en el AMBA varían según el día de la semana. ¿Hacia dónde se mueve mi lente los lunes frente a los fines de semana?
             </p>
             <div class="viz-frame">
-                <div class="bg-light text-center py-5 border rounded">
-                    <p class="text-muted small">Insertar aquí el Embed de Tableau Public (viz_4_tableau_ba.csv)</p>
-                </div>
+                <div class='tableauPlaceholder' id='viz1777066724694' style='position: relative'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='Hoja 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Hb&#47;HbitosFotogrficosenBuenosAires&#47;Hoja1&#47;1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                        <param name='embed_code_version' value='3' /> 
+                        <param name='site_root' value='' />
+                        <param name='name' value='HbitosFotogrficosenBuenosAires&#47;Hoja1' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Hb&#47;HbitosFotogrficosenBuenosAires&#47;Hoja1&#47;1.png' /> 
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='es-ES' />
+                    </object>
+                </div>                
+                <script type='text/javascript'>                    
+                    var divElement = document.getElementById('viz1777066724694');                    
+                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                    var scriptElement = document.createElement('script');                    
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                </script>
             </div>
         </div>
 
         <div class="viz-card">
             <h2 class="viz-title">4. Ritmo Semanal: La Construcción del Hábito</h2>
             <p class="viz-description">
-                Este análisis muestra el volumen acumulado de fotos por día de la semana. Cada barra se fragmenta por colores (semanas), permitiendo ver qué semanas específicas fueron anomalías de alta productividad.
+                Análisis del volumen acumulado por día de la semana. Cada barra fragmentada por colores permite identificar qué semanas específicas fueron picos de productividad digital.
             </p>
             <div class="viz-frame text-center">
                 <img src="pics_per_day.svg" alt="Distribución semanal de capturas">
@@ -167,7 +193,7 @@
                             <strong>Interpretación:</strong> La altura de la barra es el total histórico por día. Los segmentos de color indican la contribución de semanas individuales.
                         </div>
                         <div class="col-md-3 text-end">
-                            <span class="badge bg-primary">Eje X: Lunes a Domingo</span>
+                            <span class="badge bg-primary text-white">Eje X: Lunes a Domingo</span>
                         </div>
                     </div>
                 </div>
@@ -181,7 +207,7 @@
             <p class="mb-2"><strong>Victoria Reppucci</strong></p>
             <p class="small mb-4">Ciencia de Datos | ECD.2025.B</p>
             <div class="small opacity-50">
-                <strong>Metodología:</strong> Extracción de metadatos EXIF con Python (Pillow, Hachoir). <br>
+                <strong>Metodología:</strong> Extracción de metadatos EXIF con Python. <br>
                 <strong>Stack:</strong> Datawrapper, Flourish, Tableau, RAWGraphs.
             </div>
         </div>
