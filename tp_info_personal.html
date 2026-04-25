@@ -113,7 +113,7 @@
         <div class="viz-card">
             <h2 class="viz-title">1. Centros de Gravedad: ¿Dónde estuve?</h2>
             <p class="viz-description">
-                Este mapa interactivo muestra la distribución geográfica de mis capturas. El tamaño de los puntos representa la densidad de archivos, permitiendo identificar los "picos" de actividad física y digital.
+                Este mapa interactivo muestra la distribución geográfica de mis capturas. El tamaño de los puntos representa la densidad de archivos, permitiendo identificar los "picos" de actividad física y digital donde se concentró mi año.
             </p>
             <div class="viz-frame">
                 <div style="width: 100%; min-height:450px" id="datawrapper-vis-A03BC">
@@ -128,7 +128,7 @@
         <div class="viz-card">
             <h2 class="viz-title">2. Cronogeografía: Tiempo y Espacio</h2>
             <p class="viz-description">
-                Evolución temporal de mis registros. Esta visualización conecta el momento preciso del registro con su ubicación geográfica a lo largo de los meses.
+                Evolución temporal de mis registros. Esta visualización conecta el momento preciso del registro con su ubicación, permitiendo observar cómo mi huella digital se desplaza y transforma a lo largo de los meses.
             </p>
             <div class="viz-frame">
                 <div class="flourish-embed flourish-map" data-src="visualisation/28673111">
@@ -143,10 +143,10 @@
         <div class="viz-card">
             <h2 class="viz-title">3. Geografía de la Rutina: Buenos Aires</h2>
             <p class="viz-description">
-                Filtro interactivo para entender cómo mis desplazamientos en el AMBA varían según el día de la semana. ¿Hacia dónde se mueve mi lente los lunes frente a los fines de semana?
+                Filtro interactivo para entender cómo mis desplazamientos en el AMBA varían según el día de la semana. ¿Hacia dónde se mueve mi lente los lunes de oficina frente a los domingos de descanso?
             </p>
             <div class="viz-frame">
-                <div class='tableauPlaceholder' id='viz1777066724694' style='position: relative'>
+                <div class='tableauPlaceholder' id='viz1777120499981' style='position: relative'>
                     <noscript>
                         <a href='#'>
                             <img alt='Hoja 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Hb&#47;HbitosFotogrficosenBuenosAires&#47;Hoja1&#47;1_rss.png' style='border: none' />
@@ -169,7 +169,7 @@
                     </object>
                 </div>                
                 <script type='text/javascript'>                    
-                    var divElement = document.getElementById('viz1777066724694');                    
+                    var divElement = document.getElementById('viz1777120499981');                    
                     var vizElement = divElement.getElementsByTagName('object')[0];                    
                     vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
                     var scriptElement = document.createElement('script');                    
@@ -182,15 +182,17 @@
         <div class="viz-card">
             <h2 class="viz-title">4. Ritmo Semanal: La Construcción del Hábito</h2>
             <p class="viz-description">
-                Análisis del volumen acumulado por día de la semana. Cada barra fragmentada por colores permite identificar qué semanas específicas fueron picos de productividad digital.
+                Este análisis muestra el volumen acumulado de fotos por día de la semana. Cada barra se fragmenta por colores que representan semanas individuales, permitiendo identificar anomalías de alta productividad.
             </p>
             <div class="viz-frame text-center">
-                <img src="pics_per_day.svg" alt="Distribución semanal de capturas">
+                <object type="image/svg+xml" data="pics_per_day.svg" class="img-fluid" style="width: 100%; height: auto; min-height: 400px;">
+                    <img src="pics_per_day.svg" alt="Distribución semanal de capturas">
+                </object>
                 
                 <div class="legend-box text-start">
                     <div class="row align-items-center">
                         <div class="col-md-9">
-                            <strong>Interpretación:</strong> La altura de la barra es el total histórico por día. Los segmentos de color indican la contribución de semanas individuales.
+                            <strong>Interpretación:</strong> La altura de la barra representa el total histórico acumulado por día. Los segmentos cromáticos indican el aporte de cada semana específica del año.
                         </div>
                         <div class="col-md-3 text-end">
                             <span class="badge bg-primary text-white">Eje X: Lunes a Domingo</span>
@@ -207,7 +209,7 @@
             <p class="mb-2"><strong>Victoria Reppucci</strong></p>
             <p class="small mb-4">Ciencia de Datos | ECD.2025.B</p>
             <div class="small opacity-50">
-                <strong>Metodología:</strong> Extracción de metadatos EXIF con Python. <br>
+                <strong>Metodología:</strong> Extracción de metadatos EXIF con Python (Pillow, Hachoir). <br>
                 <strong>Stack:</strong> Datawrapper, Flourish, Tableau, RAWGraphs.
             </div>
         </div>
